@@ -1,9 +1,7 @@
 """Generate Toeplitz alternating-minimization figures for the manuscript.
 
 The script runs the Toeplitz alternating least-squares method, optionally
-refines the result by nonlinear least squares, and writes only PNG figures.
-It is intentionally self-contained so that the manuscript figures can be
-recreated without the older exploratory scripts used during drafting.
+refines the result by nonlinear least squares.
 """
 
 from __future__ import annotations
