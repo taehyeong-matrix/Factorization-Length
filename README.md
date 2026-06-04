@@ -85,9 +85,9 @@ The scripts include comments describing the expected outputs.
   - NumPy: `2.4.6`
   - SciPy: `1.17.1`
   - Matplotlib: `3.10.9`
-- Macaulay2
-  - `NumericalAlgebraicGeometry` package for the degree computations in `Example 4.14.(1).m2` and `Example 4.14.(2).m2`
- 
+- Macaulay2: `1.25.11`
+  - NumericalAlgebraicGeometry: `1.24`
+    
 ## Sample Results
 
 The table below summarizes one run of `python/make_toeplitz_als_figures.py`.
