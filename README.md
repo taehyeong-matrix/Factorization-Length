@@ -12,7 +12,7 @@ We study structured matrix factorization length and related factorization variet
 - `python/`
   - `make_toeplitz_als_figures.py`: generates the Toeplitz alternating-minimization figures
 - `output/`
-  - Generated PNG figures used in the paper
+  - Generated figures of the paper
 - `macaulay2/`
   - Macaulay2 scripts for degree computations and defining-equation computations
 
