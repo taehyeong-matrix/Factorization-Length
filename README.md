@@ -1,19 +1,20 @@
-# Structured Matrix Factorization Length: Toeplitz ALS Figures
+# Structured Matrix Factorization Length
 <p align="center"><a href=""><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a></p>
 
-This repository contains the Python code for generating the Toeplitz alternating-minimization figures in the manuscript "Structured Matrix Factorization Length".
+This repository contains the code of the paper "Structured Matrix Factorization Length".
 
 ## Overview
 
-We run an alternating least-squares method for products of Toeplitz matrices, refine the ALS output by nonlinear least squares, and generate the PNG figures used in the Toeplitz examples of the manuscript.
+We study structured matrix factorization length and related factorization varieties for several classical matrix structures. The repository includes Python code for the numerical Toeplitz alternating-minimization examples and Macaulay2 code for the algebraic computations appearing in the paper.
 
 ## Files
 
-- `make_toeplitz_als_figures.py`
-  - Implements the Toeplitz parameterization `vec(T)=Sb`
-  - Runs blockwise ALS updates for Toeplitz factors
-  - Applies nonlinear least-squares refinement
-  - Writes residual plots and a factor heatmap as PNG files
+- `python/`
+  - `make_toeplitz_als_figures.py`: generates the Toeplitz alternating-minimization figures
+- `output/`
+  - Generated PNG figures used in the paper
+- `macaulay2/`
+  - Macaulay2 scripts for degree computations and defining-equation computations
 
 ## Usage
 
@@ -26,7 +27,7 @@ pip install numpy scipy matplotlib
 2. Run the figure-generation script:
 
 ```bash
-python make_toeplitz_als_figures.py
+python python/make_toeplitz_als_figures.py
 ```
 
 3. The generated figures are written to `output/`.
@@ -34,7 +35,7 @@ python make_toeplitz_als_figures.py
 To choose a different output directory:
 
 ```bash
-python make_toeplitz_als_figures.py --output-dir path/to/output
+python python/make_toeplitz_als_figures.py --output-dir path/to/output
 ```
 
 ## Generated Figures
@@ -62,17 +63,18 @@ python make_toeplitz_als_figures.py --output-dir path/to/output
 ## Environment
 
 - Python: `3.13.13`
-- NumPy: `2.4.6`
-- SciPy: `1.17.1`
-- Matplotlib: `3.10.9`
+  - NumPy: `2.4.6`
+  - SciPy: `1.17.1`
+  - Matplotlib: `3.10.9`
+- Macaulay2
 
 ## Sample Results
 
-The table below summarizes one run of `make_toeplitz_als_figures.py`.
+The table below summarizes one run of `python/make_toeplitz_als_figures.py`.
 
 | Example | Length | Output | Final residual |
 |---|---:|---|---:|
 | Ye--Lim $3\times 3$ Toeplitz example | 2 | `toeplitz_3x3_residual.png` | `2.088e-14` |
 | Ye--Lim Example 2 $5\times 5$ target | 15 | `toeplitz_5x5_r15_residual.png`, `toeplitz_5x5_r15_factors.png` | `6.906e-14` |
 
-For faster checks, reduce `als_sweeps` or `max_nfev` inside `make_toeplitz_als_figures.py`.
+For faster checks, reduce `als_sweeps` or `max_nfev` inside `python/make_toeplitz_als_figures.py`.
