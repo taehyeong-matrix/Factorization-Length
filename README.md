@@ -14,9 +14,16 @@ We study structured matrix factorization length and related factorization variet
 - `output/`
   - Generated figures of the paper
 - `macaulay2/`
-  - Macaulay2 scripts for degree computations and defining-equation computations
+  - `Example 3.14.m2`: verifies that `diag(1,2,3)` is not a product of two Toeplitz matrices
+  - `Example 3.16.m2`: verifies that the upper 3-diagonal matrix `U_3` is not a product of two upper bidiagonal matrices
+  - `Example 3.17.m2`: verifies that the 5-diagonal matrix `S` is not a product of two tridiagonal matrices
+  - `Example 4.14.(1).m2`: computes numerical evidence for `deg mu_2(T_4) >= 74`
+  - `Example 4.14.(2).m2`: computes numerical evidence for `deg mu_2(T_5) >= 1885`
+  - `Example 4.15.m2`: computes defining equations for `mu_2(Lambda_3)` and `mu_2(Lambda_4)` by elimination
 
 ## Usage
+
+### Python figures
 
 1. Install the required Python packages:
 
@@ -37,6 +44,18 @@ To choose a different output directory:
 ```bash
 python python/make_toeplitz_als_figures.py --output-dir path/to/output
 ```
+
+### Macaulay2 computations
+
+Run each Macaulay2 script from the `macaulay2/` directory. For example:
+
+```bash
+cd macaulay2
+M2 --script "Example 3.14.m2"
+M2 --script "Example 4.14.(1).m2"
+```
+
+The scripts include comments describing the expected outputs.
 
 ## Generated Figures
 
@@ -67,7 +86,8 @@ python python/make_toeplitz_als_figures.py --output-dir path/to/output
   - SciPy: `1.17.1`
   - Matplotlib: `3.10.9`
 - Macaulay2
-
+  - `NumericalAlgebraicGeometry` package for the degree computations in `Example 4.14.(1).m2` and `Example 4.14.(2).m2`
+ 
 ## Sample Results
 
 The table below summarizes one run of `python/make_toeplitz_als_figures.py`.
