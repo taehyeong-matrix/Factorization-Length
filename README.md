@@ -7,8 +7,6 @@ This repository contains the Python code for generating the Toeplitz alternating
 
 We run an alternating least-squares method for products of Toeplitz matrices, refine the ALS output by nonlinear least squares, and generate the PNG figures used in the Toeplitz examples of the manuscript.
 
-The script is a cleaned-up standalone version of the local experimental code used during drafting.
-
 ## Files
 
 - `make_toeplitz_als_figures.py`
