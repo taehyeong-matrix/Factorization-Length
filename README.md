@@ -17,8 +17,7 @@ We study structured matrix factorization length and related factorization variet
   - `Example 3.14.m2`: verifies that `diag(1,2,3)` is not a product of two Toeplitz matrices
   - `Example 3.16.m2`: verifies that the upper 3-diagonal matrix `U_3` is not a product of two upper bidiagonal matrices
   - `Example 3.17.m2`: verifies that the 5-diagonal matrix `S` is not a product of two tridiagonal matrices
-  - `Example 4.14.(1).m2`: computes numerical evidence for `deg mu_2(T_4) >= 74`
-  - `Example 4.14.(2).m2`: computes numerical evidence for `deg mu_2(T_5) >= 1885`
+  - `Example 4.14.m2`: computes numerical evidence for `deg mu_2(T_4) >= 74`
   - `Example 4.15.m2`: computes defining equations for `mu_2(Lambda_3)` and `mu_2(Lambda_4)` by elimination
 
 ## Usage
