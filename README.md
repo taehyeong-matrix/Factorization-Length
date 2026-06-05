@@ -51,7 +51,7 @@ Run each Macaulay2 script from the `macaulay2/` directory. For example:
 ```bash
 cd macaulay2
 M2 --script "Example 3.14.m2"
-M2 --script "Example 4.14.(1).m2"
+M2 --script "Example 4.14.m2"
 ```
 
 The scripts include comments describing the expected outputs.
